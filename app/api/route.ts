@@ -3,7 +3,7 @@ import { parseStringPromise } from 'xml2js';
 
 export async function GET(request: Request) {
 
-        const res = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436',{ next: { revalidate: 3600 } });
+        const res = await fetch('https://post.talentvine.co.uk/feed?aggregator=client&clientID=2436',{ next: { revalidate: 360 } });
         if (!res.ok) {
           throw new Error('Failed to fetch jobs');
         }
